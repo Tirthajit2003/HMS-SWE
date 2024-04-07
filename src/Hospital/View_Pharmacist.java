@@ -41,7 +41,7 @@ public class View_Pharmacist {
         table.getTableHeader().setReorderingAllowed(false);
         JScrollPane scrollPane = new JScrollPane(table);
 
-        String[] columns = {"Pharmacist ID", "Name", "Specialization", "Username", "Phone"};
+        String[] columns = {"Pharmacist ID", "Name", "Specialization", "Username","Passsword","Phone"};
         model.setColumnIdentifiers(columns);
 
         fetchData();
@@ -109,6 +109,7 @@ public class View_Pharmacist {
                 row.add(rs.getString("name"));
                 row.add(rs.getString("specialization"));
                 row.add(rs.getString("username"));
+                row.add(rs.getString("password"));
                 row.add(rs.getString("phone"));
                 model.addRow(row);
             }

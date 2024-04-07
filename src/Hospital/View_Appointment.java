@@ -99,7 +99,7 @@ public class View_Appointment {
                 row.add(rs.getString("app_id"));
                 row.add(rs.getString("patient_name"));
                 row.add(rs.getString("contact"));
-                row.add(rs.getString("doc_id"));
+                row.add(rs.getString("doctor_id"));
                 row.add(rs.getString("date"));
                 row.add(rs.getString("time"));
                 row.add(rs.getString("reason"));

@@ -17,7 +17,7 @@ public class AdminHomePage extends JFrame implements ActionListener {
     Font f,f1,f2;
     String name;
     AdminHomePage(String adminName){
-        super("Admin Home Page");
+        super(adminName +" Home Page");
         name=adminName;
         setLocation(0,0);
         setSize(1920,1080);

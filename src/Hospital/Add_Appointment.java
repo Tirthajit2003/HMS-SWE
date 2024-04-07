@@ -161,7 +161,7 @@ public class Add_Appointment extends JFrame implements ActionListener {
             String contact = t5.getText();
             String doctorName = (String) doctorDropdown.getSelectedItem();
             String date = t3.getText();
-            String time = t4.getText();
+            String time = (String)timeDropdown.getSelectedItem();
             String reason = t6.getText();
 
             // Perform validation

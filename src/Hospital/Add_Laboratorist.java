@@ -11,7 +11,8 @@ import java.sql.SQLException;
 public class Add_Laboratorist extends JFrame implements ActionListener {
     JFrame f;
     JLabel l1, l2, l3, l4, l5, l6, l7;
-    JTextField t1, t4, t5, t6;
+    JTextField t1, t4,  t6;
+    JPasswordField t5;
     JComboBox<String> testNameComboBox;
     JButton submit, cancel;
     String adminName;
@@ -72,7 +73,7 @@ public class Add_Laboratorist extends JFrame implements ActionListener {
         l6.setFont(new Font("Arial", Font.BOLD, 20));
         l6.setForeground(Color.BLACK);
         l1.add(l6);
-        t5 = new JTextField();
+        t5 = new JPasswordField();
         t5.setBounds(550, 150, 150, 30);
         l1.add(t5);
 

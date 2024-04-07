@@ -26,6 +26,7 @@ public class LoginPage extends JFrame implements ActionListener {
     LoginPage(String tname)
     {
         this.tname=tname;
+        System.out.println(tname);
         f=new JFrame("Login Page");
         f.setBackground(Color.WHITE);
         f.setLayout(null);
@@ -105,8 +106,17 @@ public class LoginPage extends JFrame implements ActionListener {
                 {
 //                    JOptionPane.showMessageDialog(null,"Login Successful");
                     String adminName=rs.getString("name");
-                    new AdminHomePage(adminName).setVisible(true);
-                    f.setVisible(false); 
+                    if (tname.equalsIgnoreCase("admin"))
+                    {
+                        new AdminHomePage(adminName).setVisible(true);
+                        f.setVisible(false); 
+                    }
+                    else if (tname.equalsIgnoreCase("doctor"))
+                    {
+                        new DoctorHomePage(adminName).setVisible(true);
+                        f.setVisible(false);
+                    }
+                    
                 }
                 else
                 {

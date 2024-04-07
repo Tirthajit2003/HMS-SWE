@@ -12,7 +12,8 @@ import java.util.Random;
 public class Add_Pharmacist extends JFrame implements ActionListener {
     JFrame f;
     JLabel l1, l2, l3, l4, l5, l6, l7;
-    JTextField t1, t4, t5, t6;
+    JTextField t1, t4, t6;
+    JPasswordField t5;
     JComboBox<String> specializationComboBox, medicineComboBox;
     JButton submit, cancel;
     String adminName;
@@ -73,7 +74,7 @@ public class Add_Pharmacist extends JFrame implements ActionListener {
         l6.setFont(new Font("Arial", Font.BOLD, 20));
         l6.setForeground(Color.BLACK);
         l1.add(l6);
-        t5 = new JTextField();
+        t5 = new JPasswordField();
         t5.setBounds(550, 150, 150, 30);
         l1.add(t5);
 
@@ -121,7 +122,8 @@ public class Add_Pharmacist extends JFrame implements ActionListener {
 
             // Generate a random pharmacist ID
             Random random = new Random();
-            int pharmacistID = 1000 + random.nextInt(9000);
+            int pID = 1000 + random.nextInt(9000);
+            String pharmacistID=Integer.toString(pID);
 
             // Perform validation
             if (name.isEmpty() || specialization == null || username.isEmpty() || password.isEmpty() || phone.isEmpty()) {
@@ -137,7 +139,7 @@ public class Add_Pharmacist extends JFrame implements ActionListener {
                     PreparedStatement pst = conn.prepareStatement(query);
 
                     // Set parameter values for the prepared statement
-                    pst.setInt(1, pharmacistID);
+                    pst.setString(1, pharmacistID);
                     pst.setString(2, name);
                     pst.setString(3, specialization);
                     pst.setString(4, username);
