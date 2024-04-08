@@ -15,12 +15,11 @@ A Java-based hospital management application for managing patient records, appoi
 - **Patient Management**: Add, edit, and delete patient records. View patient details and medical history.
 - **Appointment Management**: Schedule, reschedule, and cancel appointments. Set reminders for upcoming appointments.
 - **Staff Management**: Add and manage doctors, nurses, pharmacists, and laboratorists. Assign roles and responsibilities.
-- **Inventory Management**: Track medical supplies, drugs, and equipment. Manage stock levels and supplier information.
-- **Reporting**: Generate reports on patient statistics, revenue, inventory status, and other key metrics.
+- **Inventory Management**: Track laboratory and pharmacist related information storing medicines and available lab tests.
 - **User Authentication**: Secure login system with role-based access control (admin, staff, receptionist, etc.).
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your_username/hospital-management-system.git
+   git clone https://github.com/Tirthajit2003/HMS-SWE.git
