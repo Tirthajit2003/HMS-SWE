@@ -236,6 +236,7 @@ public class Add_Patient extends JFrame implements ActionListener {
                 if (rowsAffected > 0) {
                     JOptionPane.showMessageDialog(f, "Patient added successfully.");
                     f.dispose(); // Close the window after adding
+                    
                 } else {
                     JOptionPane.showMessageDialog(f, "Failed to add patient.");
                 }

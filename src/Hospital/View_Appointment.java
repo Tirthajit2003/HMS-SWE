@@ -80,7 +80,8 @@ public class View_Appointment {
 
         cancelButton.addActionListener(e -> {
             frame.dispose();
-            new AdminHomePage(adminName).setVisible(true);
+            JOptionPane.showMessageDialog(frame, "Action terminated...click here to go home page");
+            new Index().setVisible(true);
         });
 
         frame.setContentPane(contentPane);

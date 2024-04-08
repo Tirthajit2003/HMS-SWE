@@ -116,6 +116,33 @@ public class LoginPage extends JFrame implements ActionListener {
                         new DoctorHomePage(adminName).setVisible(true);
                         f.setVisible(false);
                     }
+                    //To do
+                    else if (tname.equalsIgnoreCase("patient"))
+                    {
+                        new PatientHomePage(adminName).setVisible(true);
+                        f.setVisible(false);
+                    }
+                    else if (tname.equalsIgnoreCase("nurse"))
+                    {
+                        new NurseHomePage(adminName).setVisible(true);
+                        f.setVisible(false);
+                    }
+                    else if (tname.equalsIgnoreCase("pharmacist"))
+                    {
+                        new PharmacistHomePage(adminName).setVisible(true);
+                        f.setVisible(false);
+                    }
+                    else if (tname.equalsIgnoreCase("laboratorist"))
+                    {
+            //            new LaboratoristHomePage(adminName).setVisible(true);
+                        f.setVisible(false);
+                    }
+                    else if (tname.equalsIgnoreCase("accountant"))
+                    {
+            //            new AccountantHomePage(adminName).setVisible(true);
+                        f.setVisible(false);
+                    }
+                    
                     
                 }
                 else

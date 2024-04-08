@@ -7,11 +7,11 @@ import java.awt.event.*;
 /**
  * This class represents the Doctor's home page.
  */
-public class DoctorHomePage extends JFrame implements ActionListener {
+public class NurseHomePage extends JFrame implements ActionListener {
     JLabel l1;
     Font f, f1, f2;
     String name;
-    DoctorHomePage(String adminName) {
+    NurseHomePage(String adminName) {
         super(adminName + " Home Page");
         name = adminName;
         setLocation(0, 0);
@@ -33,14 +33,11 @@ public class DoctorHomePage extends JFrame implements ActionListener {
         JMenu men2 = new JMenu("Patient");
         JMenuItem ment4 = new JMenuItem("View Patients");
 
-        JMenu prescriptionMenu = new JMenu("Prescription");
-        JMenuItem addPrescriptionMenuItem = new JMenuItem("Add Prescription");
-        
-        //JMenu ViewprescriptionMenu = new JMenu("Prescription");
-        JMenuItem viewPrescriptionMenuItem = new JMenuItem("View Prescription");
+//        JMenu prescriptionMenu = new JMenu("Prescription");
+//        JMenuItem addPrescriptionMenuItem = new JMenuItem("Add Prescription");
 
-        JMenu men4 = new JMenu("Appointment");
-        JMenuItem ment8 = new JMenuItem("View Appointments");
+//        JMenu men4 = new JMenu("Appointment");
+//        JMenuItem ment8 = new JMenuItem("View Appointments");
 
         JMenu men5 = new JMenu("Nurse");
         JMenuItem ment10 = new JMenuItem("View Nurses");
@@ -51,7 +48,7 @@ public class DoctorHomePage extends JFrame implements ActionListener {
         JMenu men7 = new JMenu("Laboratorist");
         JMenuItem ment14 = new JMenuItem("View Laboratorists");
 
-        JMenu men8 = new JMenu("Hi, Doctor(" + adminName + ")");
+        JMenu men8 = new JMenu("Hi, Nurse(" + adminName + ")");
         JMenuItem ment15 = new JMenuItem("View Profile");
         JMenuItem ment16 = new JMenuItem("Change Password");
 
@@ -62,10 +59,9 @@ public class DoctorHomePage extends JFrame implements ActionListener {
 
         men2.add(ment4);
 
-        prescriptionMenu.add(addPrescriptionMenuItem);
-        prescriptionMenu.add(viewPrescriptionMenuItem);
-
-        men4.add(ment8);
+//        prescriptionMenu.add(addPrescriptionMenuItem);
+//
+//        men4.add(ment8);
 
         men5.add(ment10);
 
@@ -78,7 +74,7 @@ public class DoctorHomePage extends JFrame implements ActionListener {
 
         men9.add(ment17);
 
-        JMenuItem[] allMenuItems = {ment2, ment4, addPrescriptionMenuItem,viewPrescriptionMenuItem, ment8, ment10, ment12, ment14, ment15, ment16, ment17};
+        JMenuItem[] allMenuItems = {ment2, ment4, ment10, ment12, ment14, ment15, ment16, ment17};
 
         for (JMenuItem menuItem : allMenuItems) {
             menuItem.setFont(f1);
@@ -88,11 +84,11 @@ public class DoctorHomePage extends JFrame implements ActionListener {
         m1.add(men1);
         m1.add(Box.createHorizontalStrut(10)); 
         m1.add(men2);
+//        m1.add(Box.createHorizontalStrut(10));
+//        m1.add(prescriptionMenu);
         m1.add(Box.createHorizontalStrut(10));
-        m1.add(prescriptionMenu);
-        m1.add(Box.createHorizontalStrut(10));
-        m1.add(men4);
-        m1.add(Box.createHorizontalStrut(10));
+//        m1.add(men4);
+//        m1.add(Box.createHorizontalStrut(10));
         m1.add(men5);
         m1.add(Box.createHorizontalStrut(10));
         m1.add(men6);
@@ -105,8 +101,8 @@ public class DoctorHomePage extends JFrame implements ActionListener {
 
         men1.setFont(f);
         men2.setFont(f);
-        prescriptionMenu.setFont(f);
-        men4.setFont(f);
+//        prescriptionMenu.setFont(f);
+//        men4.setFont(f);
         men5.setFont(f);
         men6.setFont(f);
         men7.setFont(f);
@@ -115,8 +111,8 @@ public class DoctorHomePage extends JFrame implements ActionListener {
 
         men1.setForeground(Color.WHITE);
         men2.setForeground(Color.WHITE);
-        prescriptionMenu.setForeground(Color.WHITE);
-        men4.setForeground(Color.WHITE);
+//        prescriptionMenu.setForeground(Color.WHITE);
+//        men4.setForeground(Color.WHITE);
         men5.setForeground(Color.WHITE);
         men6.setForeground(Color.WHITE);
         men7.setForeground(Color.WHITE);
@@ -141,10 +137,10 @@ public class DoctorHomePage extends JFrame implements ActionListener {
                 setVisible(false);
                 new View_Patient(name);
                 break;
-            case "View Appointments":
-                setVisible(false);
-                new View_Appointment(name);
-                break;
+//            case "View Appointments":
+//                setVisible(false);
+//                new View_Appointment(name);
+//                break;
             case "View Nurses":
                 setVisible(false);
                 new View_Nurse(name);
@@ -169,20 +165,16 @@ public class DoctorHomePage extends JFrame implements ActionListener {
                 this.setVisible(false);
                 new Index();
                 break;
-            case "Add Prescription":
-                setVisible(false);
-                new Add_Prescription(name);
-                break;
-            case "View Prescription":
-                setVisible(false);
-                new View_Prescription(name);
-                break;
+//            case "Add Prescription":
+//                setVisible(false);
+//                new Add_Prescription(name);
+//                break;
             default:
                 break;
         }
     }
 
     public static void main(String[] args) {
-        new DoctorHomePage("doctor").setVisible(true);
+        new NurseHomePage("Nurse").setVisible(true);
     }
 }

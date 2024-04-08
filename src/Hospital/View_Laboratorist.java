@@ -88,7 +88,8 @@ public class View_Laboratorist {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-                new AdminHomePage(adminName).setVisible(true);
+                JOptionPane.showMessageDialog(frame, "Action terminated...click here to go home page");
+                new Index().setVisible(true);
             }
         });
 

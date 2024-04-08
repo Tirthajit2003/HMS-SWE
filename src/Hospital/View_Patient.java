@@ -93,7 +93,8 @@ public class View_Patient {
             public void actionPerformed(ActionEvent e) {
                 // Code to go back to AdminHomePage
                 frame.dispose(); // Close the current window
-                new AdminHomePage(aname).setVisible(true); // Open AdminHomePage
+                JOptionPane.showMessageDialog(frame, "Action terminated...click here to go home page");
+                new Index().setVisible(true); // Open AdminHomePage
             }
         });
 
